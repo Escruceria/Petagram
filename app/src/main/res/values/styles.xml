@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Configuración para botones -->
+        <item name="materialButtonStyle">@style/MyButtonRaised</item>
+    </style>
+
+    <!-- Estilo para botones elevados -->
+    <style name="MyButtonRaised" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/colorPrimaryDark</item> <!-- Color más oscuro -->
+        <item name="android:textColor">@color/white</item> <!-- Texto blanco -->
+        <item name="rippleColor">@color/colorAccent</item>
+    </style>
+
+</resources>
