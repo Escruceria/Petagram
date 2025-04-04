@@ -35,10 +35,12 @@ dependencies {
     // AndroidX Core
     implementation(libs.appcompat)
     implementation(libs.activity)
+    implementation(libs.cardview)
 
     // UI Components
-    implementation(libs.material)  // Versión catalogada (reemplaza la línea explícita)
+    implementation(libs.material)
     implementation(libs.constraintlayout)
+    implementation(libs.swiperefreshlayout)
 
     // Testing
     testImplementation(libs.junit)

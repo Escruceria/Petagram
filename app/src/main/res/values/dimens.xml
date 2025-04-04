@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin" >
+        <value>16dp</value>
+    </dimen>
+    <dimen name="activity_vertical_margin" >
+        <value>16dp</value>
+    </dimen>
+    <dimen name="lista_height" >
+        <value>200dp</value>
+    </dimen>
+    <dimen name="card_medida" >
+        <value>250dp</value>
+    </dimen>
+    <dimen name="card_height" >
+        <value>300dp</value>
+    </dimen>
+    <dimen name="card_title" >
+        <value>16sp</value>
+    </dimen>
+</resources>

@@ -13,8 +13,9 @@
 
     <!-- Estilo para botones elevados -->
     <style name="MyButtonRaised" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/colorPrimary</item>
         <item name="backgroundTint">@color/colorPrimaryDark</item> <!-- Color más oscuro -->
-        <item name="android:textColor">@color/white</item> <!-- Texto blanco -->
+        <item name="android:textColor">@color/colorWhite</item> <!-- Texto blanco -->
         <item name="rippleColor">@color/colorAccent</item>
     </style>
 

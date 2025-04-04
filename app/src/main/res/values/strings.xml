@@ -3,4 +3,26 @@
     <string name="text_button_click">Click</string>
     <string name="text_title">Hello World!</string>
     <string name="fab_descripcion">Favorito</string>
+    <string name="mensaje">Su mensaje es este</string>
+    <string name="texto_accion">Favorito :)</string>
+    <string name="descripcion_lista">Lista de elementos</string>
+    <string name="desc_item_titulo">Título del elemento</string>
+    <string name="desc_imagen_item">Imagen que muestra el producto</string>
+    <string name="titulo_tarjeta">Android 5.0</string>
+    <string name="descripcion_tarjeta">Descripción de la tarjeta</string>
+    <string name="ic_star">Imagen de una estrella</string>
+    <string name="ic_lolipop">Imagen de un bombon</string>
+
+    <string-array name="planetas">
+        <item name="Mercurio"></item>
+        <item name="Venus"></item>
+        <item name="Tierra"></item>
+        <item name="Marte"></item>
+        <item name="Jupiter"></item>
+        <item name="Saturno"></item>
+        <item name="Urano"></item>
+        <item name="Neptuno"></item>
+        <item name="Pluton"></item>
+
+    </string-array>
 </resources>

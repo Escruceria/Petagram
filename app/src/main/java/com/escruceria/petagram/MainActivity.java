@@ -1,18 +1,27 @@
 package com.escruceria.petagram;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
+import android.widget.Adapter;
+import android.widget.ListView;
+import android.widget.ArrayAdapter;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
+
+    SwipeRefreshLayout swipeRefreshLayout;
+    ListView lstMiLista;
+    Adapter adaptador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,15 +38,41 @@ public class MainActivity extends AppCompatActivity {
 
         // Inicialización del FAB
         inicializarFAB();
+
+        swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
+        lstMiLista = (ListView) findViewById(R.id.lstMiLista);
+
+        String[] planetas = getResources().getStringArray(R.array.planetas);
+        lstMiLista.setAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, planetas));
+
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+            }
+
+        });
+    }
+
+    public void refrescandoContenido() {
+        String[] planetas = getResources().getStringArray(R.array.planetas);
+        lstMiLista.setAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, planetas));
+        swipeRefreshLayout.setRefreshing(false);
     }
 
     private void inicializarFAB() {
         FloatingActionButton fab = findViewById(R.id.fabMiFAB);
         fab.setOnClickListener(v -> {
-            // Acción al hacer clic en el FAB
-            Toast.makeText(MainActivity.this, "Favorito :)", Toast.LENGTH_SHORT).show();
+            Snackbar.make(v, getString(R.string.mensaje), Snackbar.LENGTH_LONG)
+                    .setAction(getString(R.string.texto_accion), new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Log.i("SNACKBAR", "Click en Snackbar");
 
-            // Aquí puedes agregar la lógica que quieras ejecutar al presionar el FAB
+                        }
+                    })
+                    .setActionTextColor(getResources().getColor(R.color.colorWhite))
+                    .show();
         });
     }
 }
